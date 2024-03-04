@@ -57,8 +57,6 @@ def count_gender(sentences):
 
 def parse_gender(text):
 
-    #nltk.download('punkt')
-
     sentences = [
         [word.lower() for word in nltk.word_tokenize(sentence)]
         for sentence in nltk.sent_tokenize(text)
@@ -76,5 +74,5 @@ def parse_gender(text):
         )
 
 if __name__ == '__main__':
-    with open('ballet.txt', 'r', encoding='utf-8') as f:
+    with open('ballet.txt', 'r') as f:
         parse_gender(f.read())
